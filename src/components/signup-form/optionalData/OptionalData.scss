@@ -1,0 +1,35 @@
+@import "../../../responsive.scss";
+
+.fillData-optional {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid var(--success);
+    border-radius: 10px;
+    gap: 10px;
+
+    @include smartPhone {display: flex; flex-direction: column;}
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        label {
+            font-size: 14px;
+            font-weight: 300;
+        }
+        select {
+            padding: 5px 10px;
+            border-radius: 5px;
+            outline: none;
+        }
+        input{
+            padding: 5px 10px;
+            border-radius: 5px;
+            outline: none;
+        }
+    }
+}

@@ -1,0 +1,198 @@
+@import "../../../responsive.scss";
+
+.mobile-toggle {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-left: 10px;
+
+
+    .mt-fa {
+        padding: 6px 20px;
+        border: none;
+        background-color: transparent;
+        box-shadow: 0px 4px 12px var(--shadow);
+        background-color: var(--sec-bg);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--b-line);
+        }
+
+        .fa-bars {
+            font-size: 16px;
+            color: var(--prim);
+        }
+
+        .fa-user {
+            font-size: 28px;
+            background-color: var(--a-line);
+            border-radius: 50%;
+            padding: 3px 5px;
+        }
+    }
+
+    .m-user-true {
+        position: absolute;
+        height: 100vh;
+        width: 300%;
+        right: -9px;
+        box-shadow: 2px 4px 12px var(--shadow);
+        background-color: var(--bg);
+        top: -28px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        margin: 10px 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        opacity: 0;
+        transform: translateX(100%);
+
+        &.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .close-icon {
+            background-color: transparent;
+            margin-bottom: 40px;
+            border: none;
+            display: flex;
+            justify-content: flex-start;
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            color: var(--prim);
+
+            &:hover, &:active {
+                color: var(--btn);
+            }
+        }
+
+        .line-breaker{
+            border: 2px solid var(--a-line);
+            margin: 5px;
+        }
+
+        .m-link2 {
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+
+            .fa-icon {
+                margin-right: 10px;
+                color: var(--btn);
+            }
+
+            &:hover {
+                background-color: var(--b-line);
+                border-radius: 10px;
+            }
+        }
+
+        .change-mode {
+            border: none;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .log-out {
+                font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .m-user-false {
+        position: absolute;
+        height: 100vh;
+        width: 300%;
+        right: -9px;
+        box-shadow: 2px 4px 12px var(--shadow);
+        background-color: var(--bg);
+        top: -28px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        margin: 10px 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        opacity: 0;
+        transform: translateX(100%);
+
+        &.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .close-icon {
+            background-color: transparent;
+            margin-bottom: 40px;
+            border: none;
+            display: flex;
+            justify-content: flex-start;
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            color: var(--prim);
+
+            &:hover, &:active {
+                color: var(--btn);
+            }
+        }
+
+        .line-breaker{
+            border: 2px solid var(--a-line);
+            margin: 5px;
+        }
+
+        .m-link1 {
+            padding: 10px 20px;
+            font-size: 15px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+
+            .fa-icon {
+                margin-right: 10px;
+                color: var(--btn);
+            }
+
+            &:hover {
+                background-color: var(--b-line);
+                border-radius: 10px;
+            }
+        }
+
+        .m-link2 {
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+
+            .fa-icon {
+                margin-right: 10px;
+                color: var(--btn);
+            }
+
+            &:hover {
+                background-color: var(--b-line);
+                border-radius: 10px;
+            }
+        }
+
+        .change-mode {
+            border: none;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}

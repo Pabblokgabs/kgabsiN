@@ -1,0 +1,101 @@
+@import "../../responsive.scss";
+
+
+footer {
+    display: flex;
+    height: max-content;
+    flex-direction: column;
+    font-family: "Poppins", Arial;
+    border-top: 3px solid var(--a-line);
+
+    .footer-top {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        height: max-content;
+    
+        .container {
+            display: flex;
+            flex-direction: column;
+            padding: 50px 100px;
+
+            @include tablet {
+                padding: 50px 30px;
+            }
+
+            @include smartPhone {
+                padding: 30px 10px;
+                justify-content: center;
+                align-items: center;
+            }
+
+            span {
+                font-size: 16px;
+                font-weight: 500;
+                margin-bottom: 20px;
+    
+                img {
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+
+            h4 {
+                margin-bottom: 20px;
+            }
+
+            .links {
+                position: relative;
+                width: max-content;
+                font-size: 14px;
+                font-weight: 300;
+                margin-bottom: 5px;
+
+                &::after {
+                    content: ''; 
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: var(--blue-600);
+                    transform: translateX(-50%) scaleX(0); 
+                    transform-origin: center; 
+                    transition: transform 0.3s ease; 
+                }
+            
+                &:hover::after {
+                    transform: translateX(-50%) scaleX(1); 
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    
+    }
+    .footer-btm {
+        padding: 30px 100px 50px 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        border-top: 3px solid var(--a-line);
+        margin: 0 20px;
+
+        @include tablet {
+            padding: 50px 30px;
+        }
+
+        @include smartPhone {
+            padding: 30px 10px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        p {
+            font-weight: 300;
+            font-size: 14px;
+        }
+    }
+}

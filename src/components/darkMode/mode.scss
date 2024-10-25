@@ -1,0 +1,22 @@
+.mode {
+    
+    display: flex;
+    gap: 5px;
+
+    button {
+        color: var(--sec-bg);
+        background-color: var(--b-line);
+        padding: 10px;
+        color: var(--prim);
+        box-shadow: 0px 2px 18px var(--shadow);
+        border: none;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        &:hover {
+            background-color: var(--sec-hover-color);
+        }
+    }
+}

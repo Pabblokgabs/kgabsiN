@@ -1,0 +1,170 @@
+@import "../../../responsive.scss";
+
+.details-container {
+    display: flex;
+    height: max-content;
+    font-size: 16px;
+
+    .dc-left {
+        flex: 3;
+        margin-right: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .top {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            align-items: flex-start;
+            margin-bottom: 30px;
+
+            h1 {
+                color: var(--head-color);
+                font-size: 24px;
+            }
+
+            p {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    background-color: var(--sec-btn);
+                    padding: 3px 5px;
+                    color: var(--gray-50);
+                    border-radius: 5px;
+                }
+            }
+        }
+
+        .middle {
+            .lineBreaker{border: 2px solid var(--b-line); margin: 20px 0;}
+
+            h3, h2, h1, h4 {
+                margin-bottom: 20px;
+                color: var(--head-color);
+            }
+
+            .about-container {
+                display: flex;
+                justify-content: space-between;
+                margin: 40px 0;
+
+                .breakerLine {
+                    height: 50px;
+                    width: 3px;
+                    background-color: var(--a-line);
+                    margin: 0 10px;
+                }
+
+                .container {
+                    height: max-content;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+
+                    p {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    .dc-right {
+        flex: 1;
+        border-radius: 20px;
+        box-shadow: 0px 0px 12px var(--shadow);
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+        
+        .container {
+            padding: 20px;
+
+            .lineBreaker{border: 2px solid var(--b-line); margin: 20px 0;}
+
+            .price {
+                font-weight: 700;
+                font-size: 24px;
+                display: flex;
+                gap: 10px;
+                align-items: flex-end;
+                color: var(--head-color);
+    
+                p {
+                    font-weight: 300;
+                    font-size: 16px;
+                    padding-bottom: 5px;
+                }
+            }
+
+            span {
+                font-weight: 400;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-top: 10px;
+
+                &.deposit {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 0;
+
+                    b {
+                        background-color: var(--sec-bg);
+                        padding: 2px 5px;
+                        border-radius: 2px;
+                    }
+                }
+            }
+
+            .button {
+                width: 100%;
+                margin-bottom: 20px;
+
+                button {
+                    width: 100%;
+                    padding: 10px 0;
+                    border: none;
+                    background-color: var(--btn);
+                    color: var(--gray-100);
+                    border-radius: 10px;
+                    cursor: pointer;
+
+                    &:hover {background-color: var(--sec-btn); color: var(--white);}
+                }
+            }
+
+            .button2 {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+
+                button {
+                    padding: 5px 20px;
+                    border: 2px solid var(--a-line);
+                    background-color: var(--sec-bg);
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    color: var(--head-color);
+                    cursor: pointer;
+                    transition: all .4 ease;
+
+                    &:hover {box-shadow: 2px 5px 18px var(--shadow);} 
+                }
+            }
+        }
+    }
+}

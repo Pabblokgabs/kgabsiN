@@ -1,0 +1,111 @@
+@import "../../responsive.scss";
+
+.help-bot {
+    width: 300px;
+    height: 250px;
+    background-color: var(--sec-bg);
+    box-shadow: 0px 1px 20px var(--shadow);
+    position: fixed;
+    right: 10px;
+    bottom: 50px;
+    z-index: 20;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+
+    .hb-top {
+        flex: 1;
+        border-bottom: 1px solid var(--a-line);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hb-middle {
+        flex: 6;
+        background-color: white;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+
+        .chats-container-bot {
+            max-width: 50%; 
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            background-color: #e0f7fa;
+            align-self: flex-start; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 12px;
+
+            .message-time {
+                font-size: 10px;
+                color: var(--gray-600);
+                margin-top: 2px; 
+                text-align: right;
+            }
+        }
+
+        .chats-container-user {
+            max-width: 50%;
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 5px; 
+            background-color: #ffe0b2; 
+            align-self: flex-end;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 12px;
+
+            .message-time {
+                font-size: 8px;
+                color: var(--gray-600);
+                margin-top: 2px;
+                text-align: right; 
+            }
+        }
+    }
+
+    .hb-bottom {
+        flex: 1.2;
+        background-color: var(--bg2);
+        display: flex;
+        justify-content: flex-end;
+        border: 3px solid var(--b-line);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        textarea {
+            width: 100%;
+            padding: 2px 5px;
+            font-family: sans-serif;
+            background-color: var(--bg2);
+            color: var(--prim);
+            outline: none;
+            resize: none;
+            border: none;
+            font-size: 12px;
+            font-weight: 300;
+            border-bottom-left-radius: 10px;
+
+            &:focus,
+            &:active {
+                border: none;
+            }
+        }
+
+        button {
+            background-color: var(--btn);
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-bottom-right-radius: 10px;
+
+            &:hover {
+                color: var(--hover-color);
+                background-color: var(--sec-btn);
+            }
+        }
+    }
+}

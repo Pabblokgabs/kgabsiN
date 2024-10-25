@@ -1,0 +1,199 @@
+@import "../../responsive.scss";
+
+.featured-varsity {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 100px;
+    height: 30rem;
+    gap: 50px;
+    font-family: "Robot", "Lato", sans-serif;
+
+    @include laptop {
+
+    }
+    @include tablet {
+        
+    }
+    @include smartPhone {
+        padding: 30px 10px 0 10px;
+    }
+
+    .fv-filter-container {
+        display: flex;
+        gap: 10px;
+
+        button {
+            padding: 8px 20px;
+            border: 2px solid var(--a-line);
+            border-radius: 20px;
+            color: var(--prim);
+            cursor: pointer;
+            background-color: transparent;
+            transition: all .5 ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            &.active {
+                background-color: var(--sec-btn);
+                color: var(--bg);
+            }
+        }
+    }
+
+    .fv-image-container {
+        position: relative;
+        display: flex;
+        flex: 1;
+
+        .btn-left {
+            position: absolute;
+            height: 100%;
+            width: max-content;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            left: -10px;
+            top: 0;
+
+            .btn-cont-left {
+                background-color: var(--bg);
+                box-shadow: -5px 0px 12px var(--shadow);
+                width: 30px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                button {
+                    border: none;
+                    background-color: transparent;
+                    color: var(--4th-btn);
+                    transform: scaleY(2);
+                    padding-top: 2px;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: var(--prim);
+                    }
+                }
+            }
+        }
+        .btn-right {
+            position: absolute;
+            height: 100%;
+            width: max-content;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            right: -10px;
+            top: 0;
+
+            .btn-cont-right {
+                background-color: var(--bg);
+                box-shadow: 5px 0px 12px var(--shadow);
+                width: 30px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                button {
+                    border: none;
+                    background-color: transparent;
+                    color: var(--4th-btn);
+                    transform: scaleY(2);
+                    padding-top: 2px;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: var(--prim);
+                    }
+                }
+            }
+        }
+
+        .fv-contant-container{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: flex;
+
+            .sv-cc-containers {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                gap: 40px;
+                overflow: hidden;
+                flex-wrap: nowrap;
+
+                .container {
+                    height: 100%;
+                    min-width: 200px;
+                    border-radius: 10px;
+                    position: relative;
+
+                    @include smartPhone {
+                        width: 150px;
+                    }
+
+                    .color-hover {
+                        background-color: var(--sec);
+                        position: absolute;
+                        top: 0;
+                        height: 100%;
+                        z-index: 2;
+                    }
+
+                    .container-info-img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                        z-index: 1;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        .img-cont {
+                            width: 100%;
+                            height: 70%;
+                            overflow: hidden;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 10px;
+                            }
+                        }
+
+                        .info-cont {
+                            width: 100%;
+                            flex: 1;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 5px;
+
+                            h1 {
+                                font-size: 18px;
+                            }
+
+                            p{
+                                font-size: 14px;
+                                font-weight: 300;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+@import "../../responsive.scss";
+
+.province-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: max-content;
+    padding: 50px 100px;
+
+    @include smartPhone {
+        padding: 10px 10px 50px 10px;
+    }
+
+    span {
+        font-size: 25px;
+        font-weight: 700;
+        color: var(--head-color);
+    }
+
+    .pf-filter-container {
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+
+        &.expanded {
+            height: auto;
+        }
+
+        .pf-button-container {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+
+            button {
+                font-size: 14px;
+                padding: 2px;
+                border: none;
+                background-color: transparent;
+                color: var(--prim);
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.1);
+                    color: var(--gray-300);
+                }
+
+                &.active {
+                    border-bottom: 2px solid var(--btn);
+                    color: var(--btn);
+                }
+            }
+        }
+        .line-breaker{
+            border-bottom: 3px solid var(--a-line);
+            margin: 15px 0;
+        }
+
+        .pf-Links-container {
+            width: 100%;
+        }
+    }
+
+    .see-more-link {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 10px;
+        
+        button {
+            border: none;
+            background-color: transparent;
+            color: var(--sec-btn);
+            font-size: 16px;
+            font-style: italic;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,217 @@
+@import "../../responsive.scss";
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    height: 100px;
+    border-bottom: 3px solid var(--a-line);
+    font-family: "Poppins", "Lato", sans-serif;
+    position: relative;
+
+    @include laptop {
+        padding: 0 50px;
+    }
+
+    @include tablet {
+        padding: 0 20px;
+    }
+
+    @include smartPhone {
+        padding: 0 10px;
+        height: 80px;
+    }
+
+    .nav-left {
+        display: flex;
+        align-items: center;
+        gap: 100px;
+
+        @include laptop {
+            gap: 45px;
+        }
+
+        @include tablet {
+            gap: 30px;
+        }
+
+        .logo-nav-left {
+            display: flex;
+            align-items: center;
+
+            .lnl-link {
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 29px;
+                    margin-right: 5px;
+    
+                    @include tablet {
+                        width: 20px;
+                        margin-right: 5px;
+                    }
+    
+                    @include smartPhone {
+                        width: 18px;
+                        margin-right: 3px;
+                    }
+                }
+        
+                h1 {
+                    display: flex;
+                    font-size: 39px;
+                    font-weight: 700;
+                    align-items: center;
+                    margin-top: auto;
+                    color: var(--logo);
+
+                    @include laptop {
+                        font-size: 30px;
+                    }
+    
+                    @include tablet {
+                        font-size: 26px;
+                    }
+    
+                    @include smartPhone {
+                        font-size: 20px;
+                    }
+                    
+                    span {
+                        color: var(--btn);
+                        margin-left: 5px;
+                        font-size: 39px;
+                        font-weight: 700;
+        
+                        @include laptop {
+                            font-size: 30px;
+                        }
+        
+                        @include tablet {
+                            font-size: 26px;
+                        }
+        
+                        @include smartPhone {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .links-nav-left {
+            display: flex;
+            gap: 50px;
+            font-size: 14px;
+
+            .lnl-hover {
+                position: relative;
+
+                &::after {
+                    content: ''; 
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: var(--blue-400);
+                    transform: translateX(-50%) scaleX(0); 
+                    transform-origin: center; 
+                    transition: transform 0.3s ease; 
+                }
+            
+                &:hover::after {
+                    transform: translateX(-50%) scaleX(1); 
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            @include laptop {
+                gap: 20px;
+            }
+
+            @include tablet {
+                gap: 15px;
+            }
+
+            @include smartPhone {
+                display: none;
+            }
+        }
+    }
+
+    .nav-right {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        @include smartPhone {
+            gap: 10px;
+        }
+
+        .landlord-link {
+            font-size: 16px;
+            font-weight: 700;
+            position: relative;
+            text-decoration: none;
+        
+            &::after {
+                content: ''; 
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+                background-color: var(--blue-400);
+                transform: translateX(-50%) scaleX(0); 
+                transform-origin: center; 
+                transition: transform 0.3s ease; 
+            }
+        
+            &:hover::after {
+                transform: translateX(-50%) scaleX(1); 
+            }
+        
+            @include tablet {
+                font-size: 14px;
+            }
+        
+            @include smartPhone {
+                display: none;
+            }
+        }
+        
+        
+
+        .landlord-link2{
+            display: none;
+            font-size: 16px;
+
+            @include smartPhone {
+                display: inline;
+            }
+        }
+
+        .notMobile{
+            display: flex;
+            align-items: center;
+
+            @include smartPhone {
+                display: none;
+            }
+        }
+
+        .mobile{
+            display: none;
+
+            @include smartPhone {
+                display: block;
+            }
+        }
+    }
+}

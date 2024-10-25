@@ -1,0 +1,59 @@
+@import "../../responsive.scss";
+
+.filter-page {
+    padding: 50px 100px;
+    height: max-content;
+    display: flex;
+
+    @include laptop {
+        padding: 50px;
+    }
+
+    @include tablet {
+        padding: 30px 20px;
+        flex-direction: column;
+        height: calc(100vh - 100px);
+        overflow: hidden;
+    }
+
+    @include smartPhone {
+        padding: 20px 10px;
+    }
+
+    .list-container {
+        flex: 3;
+        height: max-content;
+
+        @include tablet {
+            height: 60%;
+            overflow: auto;
+        }
+
+        .wrapper {
+            margin-right: 50px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+
+            @include tablet {
+                margin: 0;
+            }
+
+            @include smartPhone {
+                margin: 0;
+            }
+        }
+    }
+
+    .map-container {
+        flex: 2;
+        height: calc(100vh - 200px);
+
+        @include smartPhone {
+            display: none;
+            height: 40%;
+            background-color: red;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,165 @@
+@import "../../responsive.scss";
+
+.single-page {
+    height: max-content;
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+
+    .singlePage-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h1 {
+                color: var(--head-color);
+                font-size: 30px;
+            }
+            button {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                font-size: 16px;
+                border: 2px solid var(--b-line);
+                cursor: pointer;
+                padding: 2px 3px;
+                background-color: transparent;
+                color: var(--prim);
+
+                &:hover {background-color: var(--a-line);}
+                &:hover .fabookmark {color: aqua;}
+            }
+        }
+
+        .line-breaker {border: 2px solid var(--a-line);}
+
+        .bottom {
+            display: flex;
+        
+            .hosts {
+                display: flex;
+                width: max-content;
+                height: max-content;
+                padding: 20px;
+                box-shadow: 0px 0px 18px var(--shadow);
+                border-radius: 10px;
+
+                .main-host {
+                    display: flex;
+                    gap: 10px;
+
+                    .left {
+                        display: flex;
+                        flex-direction: column;
+                        border-right: 2px solid var(--b-line);
+                        padding-right: 20px;
+
+                        img {
+                            width: 80px;
+                            height: 80px;
+                            object-fit: cover;
+                            border: 2px solid var(--b-line);
+                            border-radius: 50%;
+                            margin-bottom: 10px;
+                        }
+
+                        span {
+                            text-align: center;
+                            font-weight: 600;
+                        }
+                    }
+
+                    .right {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        span {
+                            display: flex;
+                            //align-items: center;
+                            gap: 5px;
+
+                            &.language {
+                                flex-direction: column;
+
+                                p {
+                                    text-align: center;
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .additional-hosts {
+                    display: flex;
+                    flex-direction: column;
+                    border-left: 4px solid var(--a-line);
+                    margin-left: 10px;
+                    gap: 10px;
+
+                    span {
+                        margin-left: 10px;
+                        text-decoration: underline;
+                        color: var(--head-color);
+                        width: auto;
+                        text-align: center;
+                    }
+
+                    .container {
+                        display: flex;
+                        flex-direction: column;
+                        margin-left: 10px;
+                        gap: 10px;
+
+                        .host {
+                            display: flex;
+                            gap: 10px;
+                            align-items: center;
+                    
+                            img {
+                                width: 30px;
+                                height: 30px;
+                                object-fit: cover;
+                                border-radius: 50%;
+                            }
+
+                            .name-role {
+                                display: flex;
+                                flex-direction: column;
+
+                                p {
+                                    font-weight: 500;
+                                    color: var(--sec);
+                                    font-size: 14px;
+
+                                    &.bold {text-decoration: underline; font-weight: 300;}
+                                }
+                            }
+                            .lan {
+                                display: flex;
+                                flex-direction: column;
+                                font-weight: 300;
+                                margin-left: 20px;
+                                font-size: 14px;
+                                span {
+                                    text-align: start;
+                                    margin: 0;
+                                    
+                                }
+
+                                p {text-decoration: none;}
+                            }
+                        }
+                    }
+                }
+            }
+        }        
+    }
+}

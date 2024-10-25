@@ -1,0 +1,119 @@
+@import "../../../responsive.scss";
+
+.not-mobile {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
+
+    button {
+        border: none;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+
+        &:hover {
+            background-color: var(--sec-hover-color);
+        }
+
+        .fa-bars {
+            font-size: 16px;
+            color: var(--prim);
+        }
+
+        .fa-user {
+            font-size: 28px;
+            background-color: var(--a-line);
+            border-radius: 50%;
+            padding: 3px 5px;
+        }
+    }
+
+    .nm-user-true {
+        position: absolute;
+        height: max-content;
+        width: 250px;
+        right: 0px;
+        box-shadow: 2px 4px 12px var(--shadow);
+        background-color: var(--bg);
+        top: 50px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        margin: 10px 0;
+        z-index: 10;
+
+        .line-breaker{
+            border: 2px solid var(--a-line);
+            margin: 5px;
+        }
+
+        .nm-link2 {
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+
+            .fa-icon {
+                margin-right: 10px;
+                color: var(--btn);
+            }
+
+            &:hover {
+                background-color: var(--b-line);
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .nm-user-false {
+        display: flex;
+        position: absolute;
+        height: max-content;
+        width: 250px;
+        right: 0px;
+        box-shadow: 2px 4px 12px var(--shadow);
+        background-color: var(--bg);
+        top: 50px;
+        flex-direction: column;
+        border-radius: 10px;
+        font-size: 14px;
+        font-family: Arial, "Lato";
+        z-index: 10;
+
+        .nm-link1 {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 600;
+
+            &:hover {
+                background-color: var(--b-line);
+                border-radius: 10px;
+            }
+        }
+
+        .line-breaker{
+            border: 2px solid var(--a-line);
+            margin: 5px;
+        }
+
+        .nm-link2 {
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 300;
+
+            &:hover {
+                background-color: var(--b-line);
+                border-radius: 10px;
+            }
+        }
+    }
+}

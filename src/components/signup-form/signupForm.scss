@@ -1,0 +1,103 @@
+@import "../../responsive.scss";
+
+.signup-form {
+    height: max-content;
+    width: 100%;
+    border-left: 3px solid var(--a-line);
+
+    @include smartPhone {border: none;}
+
+    form {
+        padding-left: 10px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        @include smartPhone {padding: 0;}
+
+        h1 {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .signup-form-top {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+
+            @include smartPhone {display: flex; flex-direction: column;}
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                .error {
+                    color: var(--error);
+                    font-size: 12px;
+                }
+
+                label {
+                    font-weight: 300;
+                    font-size: 14px;
+                }
+
+                input {
+                    padding: 10px 20px;
+                    border: 2px solid var(--b-line);
+                    outline: none;
+                    border-radius: 10px;
+                    background-color: var(--sec-bg);
+                    box-shadow: 0px 8px 18px var(--shadow);
+                }
+            }
+        }
+        .signup-form-middle {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 0;
+            height: max-content;
+            width: 100%;
+
+            .checkbox-optional {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                font-size: 14px;
+                font-weight: 300;
+            }
+        }
+        .signup-form-bottom {
+            display: flex;
+            justify-content: space-between;
+            .terms-cond {
+                display: flex;
+                align-items: center;
+                font-size: 12px;
+                gap: 5px;
+                .link {color: var(--btn);}
+            }
+
+            button {
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                background-color: var(--btn);
+                color: var(--gray-100);
+                cursor: pointer;
+                
+                @include smartPhone {min-width: max-content;}
+
+                &:disabled {
+                    opacity: 0.3;
+                    cursor: not-allowed;
+                }
+
+                &:hover {
+                    background-color: var(--sec-btn);
+                    color: var(--white);
+                }
+            }
+        }
+    }
+}

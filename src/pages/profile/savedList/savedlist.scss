@@ -1,0 +1,48 @@
+@import "../../../responsive.scss";
+
+.savedlist {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h1 {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        border-bottom: 3px solid var(--b-line);
+    }
+
+    .list-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: 100%;
+        overflow-x: auto;
+
+        .list-container {
+            display: flex;
+            border: 2px solid var(--a-line);
+            padding: 10px;
+            border-radius: 10px;
+            height: auto;
+
+            img {
+                height: 150px;
+                width: 200px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+            .right {
+                margin-left: 10px;
+                display: flex;
+                flex-direction: column;
+                grid-area: 5px;
+
+                h2 {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

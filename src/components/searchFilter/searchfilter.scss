@@ -1,0 +1,158 @@
+@import "../../responsive.scss";
+
+.searchfilter {
+    margin-top: 50px;
+
+    @include smartPhone {
+        margin-top: 10px;
+    }
+
+    form {
+        display: flex;
+        border: 5px solid var(--a-line);
+        border-radius: 15px;
+
+        @include smartPhone {
+            flex-direction: column;
+            border: none;          
+        }
+
+        .sf-left {
+            flex: 1;
+            display: flex;
+            padding: 10px;
+
+            @include smartPhone {
+                flex-direction: column;       
+            }
+
+            .select {
+                display: flex;
+                flex-direction: column;
+                border-right: 3px solid var(--b-line);
+                gap: 10px;
+                padding: 0 10px;
+
+                @include smartPhone {
+                    border: none;
+                    padding: 0;
+                    margin-bottom: 15px;
+                }
+    
+                label {
+                    font-size: 14px;
+                    font-weight: 300;
+
+                    @include smartPhone {
+                        font-size: 12px;
+                    }
+                }
+    
+                select {
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 16px;
+                    background-color: transparent;
+                    color: var(--prim);
+
+                    @include smartPhone {
+                        border: 1px solid var(--a-line);
+                        margin-bottom: 10px;
+                        font-size: 14px;
+                        padding: 5px 10px;
+                    }
+    
+                    &.long {
+                        width: 250px;
+
+                        @include laptop {
+                            width: 200px;
+                        }
+
+                        @include smartPhone {
+                            width: 100%;
+                        }
+                    }
+
+                    &:focus {
+                        background-color: var(--bg);
+                        outline: none;
+                    }
+                }
+            }
+    
+            .price {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin: 0 10px;
+
+                @include laptop {
+                    width: 100px;
+                }
+
+                @include smartPhone {
+                    margin: 0;
+                }
+
+                label {
+                    font-size: 14px;
+                    font-weight: 300;
+                }
+
+                input {
+                    border: none;
+                    box-shadow: 5px 5px 12px var(--shadow);
+                    border-top: 1px solid var(--prim);
+                    border-left: 1px solid var(--prim);
+                    background-color: transparent;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    padding: 5px 10px;
+                    color: var(--prim);
+                    outline: none;
+                }
+            }
+        }
+
+        .sf-right {
+            flex: 1;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            border-left: 5px solid var(--a-line);
+
+            @include smartPhone {
+                border: none;
+                margin-top: 20px;
+            }
+
+            button {
+                padding: 10px 20px;
+                border: none;
+                background-color: var(--btn);
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+                height: 100%;
+                width: 100%;
+                gap: 5px;
+                color: var(--gray-100);
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @include smartPhone {
+                    border: 10px;
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0px;
+                }
+
+                &:hover {
+                    background-color: var(--sec-btn);
+                    color: var(--white);
+                }
+            }
+        }
+    }
+}

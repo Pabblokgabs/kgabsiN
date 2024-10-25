@@ -1,0 +1,116 @@
+@import "../../responsive.scss";
+
+.reviews {
+    padding: 0px 100px;
+    height: max-content;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: center;
+
+    @include tablet {
+        padding: 50px 20px;
+    }
+
+    @include smartPhone {
+        padding: 20px 10px;
+    }
+
+    .reviews-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        width: 35%;
+
+        @include smartPhone {
+            width: 100%;
+        }
+
+        span {
+            font-size: 30px;
+            font-weight: 900;
+            color: var(--head-color);
+            margin-bottom: 20px;
+        }
+
+        .rev-cont-content {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            transition: transform 0.5s ease;
+            opacity: 1;
+            transition:  opacity 0.2s ease;
+
+            &.fade {opacity: 0;}
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+                min-width: 100%;
+                overflow: hidden;
+                flex-wrap: nowrap;
+
+                .img-bunner {
+                    width: 250px;
+                    height: 250px;
+                    background-color: var(--sec-btn);
+                    border: 1px solid var(--b-line);
+                    border-radius: 50%;
+                    padding: 10px;
+                    overflow: hidden;
+                    margin-bottom: 20px;
+
+                    img {
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .faUser {
+                        color: var(--gray-400);
+                        width: 100%;
+                        height: 100%;
+                        background-color: var(--gray-950);
+                        border-radius: 50%;
+                    }
+                }
+
+                p {
+                    text-align: center;
+                    width: 100%;
+                    font-weight: 400;
+                }
+                span {
+                    font-size: 18px;
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .switch-button {
+        display: flex;
+        gap: 20px;
+
+        button {
+            background-color: var(--sec-btn);
+            border-radius: 50%;
+            border: none;
+            color: var(--gray-300);
+            padding: 10px;
+            cursor: pointer;
+
+            .fa {
+                transform: scaleY(1.8);
+            }
+
+            &:hover {
+                background-color: var(--btn);
+                color: var(--white);
+            }
+        }
+    }
+}

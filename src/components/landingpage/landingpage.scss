@@ -1,0 +1,206 @@
+@import "../../responsive.scss";
+
+.landing-page {
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    padding: 0 100px;
+    font-family: "Roboto";
+    gap: 100px;
+    width: 100%;
+
+    @include laptop {
+        padding: 0 50px;
+    }
+
+    @include tablet {
+        padding: 0 20px;
+    }
+
+    @include smartPhone {
+        padding: 50px 10px 0 10px;
+        height: max-content;
+    }
+
+    .home-top {
+        flex: 5;
+        display: flex;
+        align-items: flex-end;
+        width: 100%;
+
+        .ht-container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+
+            .ht-left{
+                flex: 3;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                justify-content: center;
+
+                p {
+                    font-size: 14px;
+                    font-weight: 400;
+
+                    @include smartPhone {
+                        font-size: 12px;
+                    }
+                }
+
+                span {
+                    font-weight: 900;
+                    font-size: 40px;
+                    font-family: "Lato";
+
+                    @include smartPhone {
+                        font-size: 25px;
+                        font-weight: 900;
+                    }
+                }
+
+                .search-filter {
+                    width: 100%;
+                }
+            }
+
+            .ht-right {
+                flex: 2;
+                height: 100%;
+                position: relative;
+                overflow: auto;
+
+                @include laptop {
+                    overflow: inherit;
+                }
+            
+                @include tablet {
+                    display: none;
+                }
+            
+                @include smartPhone {
+                    display: none;
+                }
+
+                .bg-cycle {
+                    height: 20rem;
+                    width: 20rem;;
+                    background-color: var(--sec-btn);
+                    border-radius: 50%;
+                    position: relative;
+
+                    .bg-img {
+                        width: 90%;
+                        height: 95%;
+                        border-radius: 50%;
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        overflow: hidden;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                .bg-cycle2 {
+                    position: absolute;
+                    right: 0px;
+                    top: 0px;
+                    width: 10rem;
+                    height: 10rem;
+                    background-color: var(--sec-btn);
+                    border-radius: 50%;
+                    z-index: 2;
+
+                    @include laptop {
+                        top: -30px;
+                    }
+
+                    .bg-img2 {
+                        border-radius: 50%;
+                        position: relative;
+                        height: 90%;
+                        width: 90%;
+                        overflow: hidden;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        .bg-img-clr {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            right: 0;
+                            bottom: 0;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .home-bottom {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .hb-container {
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            background-color: var(--thrd-bg);
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 0 12px var(--shadow);
+
+            @include laptop {
+                padding: 0 50px;
+            }
+        
+            @include tablet {
+                width: 100%;
+            }
+        
+            @include smartPhone {
+                width: 100%;
+            }
+
+            span {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+
+                h4 {
+                    font-weight: 900;
+                    font-size: 20px;
+
+                    @include smartPhone {
+                        font-size: 16px;
+                    }
+                }
+
+                p {
+                    font-size: 14px;
+                    font-weight: 400;
+
+                    @include smartPhone {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

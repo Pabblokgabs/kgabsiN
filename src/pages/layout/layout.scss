@@ -1,0 +1,82 @@
+@import "../../responsive.scss";
+
+.layout {
+    height: max-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .display-none{display: none;}
+
+    .content {
+        flex: 1;
+        height: max-content;
+    }
+    
+    .helpbot {
+        position: fixed;
+        right: 10px;
+        bottom: 50px;
+        cursor: pointer;
+        font-size: 30px;
+        transition: all 0.3s ease;
+
+        &.active {
+            bottom: calc(300px);
+            right: calc(290px);
+        }
+
+        &:hover {
+            color: var(--btn);
+            transform: scale(1.1);
+        }
+
+        .tooltip {
+            visibility: hidden;
+            text-align: center;
+            position: absolute;
+            color: var(--prim);
+            bottom: 30px; 
+            right: 10px; 
+            z-index: 100; 
+            font-size: 12px;
+            transition: visibility 0.2s ease-in-out;
+            width: 100px;
+        }
+
+        &:hover .tooltip {
+            visibility: visible;
+        }
+    }
+
+    .login-container-visible {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 110;
+
+        .lcv-contain-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .color-blur {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: var(--b-line);
+                opacity: .8;
+                z-index: -1;
+            }
+        }
+    }
+}
+    
