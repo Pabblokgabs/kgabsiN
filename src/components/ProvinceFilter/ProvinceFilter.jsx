@@ -28,7 +28,7 @@ function ProvinceFilter() {
 
     return (
         <section className={`province-filter`}>
-            <span>Quick Links</span>
+            <span>Quick Overview:</span>
             <div className="pf-filter-container" style={{ height: isExpanded ? 'auto' : '200px' }}>
                 <div className="pf-button-container">
                     {buttons.map((button, index) => (

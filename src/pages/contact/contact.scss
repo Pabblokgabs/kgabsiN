@@ -1,0 +1,87 @@
+@import "../../responsive.scss";
+
+.contact-page {
+    padding: 50px 100px;
+    height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    gap: 50px;
+
+    .top-hint {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        p {text-align: center;}
+    }
+
+    .contact-wrapper {
+        width: 100%;
+        height: max-content;
+        display: flex;
+
+        .contact-info {
+            flex: 3;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            .container {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                span {
+                    font-size: 24px;
+                }
+
+                p{
+                    font-size: 18px;
+                    padding-bottom: 2px;
+                }
+            }
+        }
+
+        form {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            input {
+                padding: 10px 20px;
+                border-radius: 10px;
+                border: 3px solid var(--b-line);
+                outline: none;
+            }
+
+            textarea {
+                height: 200px;
+                padding: 10px 20px;
+                border-radius: 10px;
+                border: 3px solid var(--a-line);
+                outline: none;
+            }
+
+            .button {
+                display: flex;
+                justify-content: flex-end;
+
+                button {
+                    padding: 10px 40px;
+                    border-radius: 10px;
+                    border: none;
+                    background-color: var(--btn);
+                    color: var(--gray-50);
+                    cursor: pointer;
+                    &:hover {background-color: var(--sec-btn);}
+                }
+            }
+        }
+    }
+}

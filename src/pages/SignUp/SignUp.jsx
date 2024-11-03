@@ -8,9 +8,12 @@ function SignUp() {
                 <div className="suc-left">
                     <h1>Welcome</h1>
                     <div className="suc-left-container">
-                        <img src="/pagePhotos/key3.jpg" alt="" />
-                        <div className="dim-color"></div>
-                        <div className="container"></div>
+                        <h4>To</h4>
+                        <div className="logo">
+                            <img src="logo.png" alt="Logo"/>
+                            <p>kgabs <span>iN</span></p>
+                        </div>
+                        <h6>One Step In Finding Your Home, Right by Campus!</h6>
                     </div>
                 </div>
                 <div className="suc-right"><SignUpForm /></div>

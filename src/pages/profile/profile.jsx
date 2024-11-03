@@ -1,7 +1,7 @@
 import "./profile.scss";
 import { useState } from 'react';
 import { FaUser, FaBell, FaBookmark, FaCalendarCheck, FaEnvelopeOpenText, FaComments } from 'react-icons/fa';
-import { renderActiveComponent } from "../../libraries/profile";
+import { renderActiveComponent } from "../../libraries/UserProfileRender";
 
 function Profile() {
     const [activeComponent, setActiveComponent] = useState('notifications');
@@ -13,7 +13,7 @@ function Profile() {
                     <div className="button-container">
                         <button className={activeComponent === 'notifications' ? 'active' : ''} onClick={() => setActiveComponent('notifications')}><FaBell/><span>Notifications</span></button>
                         <button className={activeComponent === 'bookings' ? 'active' : ''} onClick={() => setActiveComponent('bookings')}><FaCalendarCheck/><span>Bookings</span></button>
-                        <button className={activeComponent === 'requests' ? 'active' : ''} onClick={() => setActiveComponent('requests')}><FaEnvelopeOpenText/><span>Requests</span></button>
+                        <button className={activeComponent === 'news' ? 'active' : ''} onClick={() => setActiveComponent('news')}><FaEnvelopeOpenText/><span>News updates</span></button>
                         <button className={activeComponent === 'savedList' ? 'active' : ''} onClick={() => setActiveComponent('savedList')}><FaBookmark/><span>Saved List</span></button>
                         <button className={activeComponent === 'chats' ? 'active' : ''} onClick={() => setActiveComponent('chats')}><FaComments/><span>Chats</span></button>
                         <div className="lineBreaker"></div>
@@ -26,7 +26,6 @@ function Profile() {
                 <div className="conta-middle">
                     {renderActiveComponent(activeComponent)}
                 </div>
-                <div className="conta-right"></div>
             </div>
         </section>
     );

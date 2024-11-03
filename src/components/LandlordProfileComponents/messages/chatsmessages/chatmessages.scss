@@ -1,0 +1,120 @@
+.chat-messages {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-right: 3px solid var(--sec-line);
+
+    .chat-messages-top {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap: 20px;
+
+        input {
+            padding: 10px;
+            border-radius: 10px;
+            outline: none;
+            background-color: var(--input);
+            color: var(--text);
+        }
+
+        .top-top-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            color: var(--text);
+
+            h1 {
+                color: var(--head-text);
+            }
+
+            .select-icon {
+                cursor: pointer;
+                font-size: 25px;
+            }
+
+            .options {
+                position: absolute;
+                background-color: var(--input);
+                z-index: 100;
+                right: 5px;
+                top: 30px;
+                border-radius: 4px;
+                width: 100px;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                span {
+                    font-size: 14px;
+                    font-weight: 300;
+                }
+        
+                .option {
+                    cursor: pointer;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 5px;
+                    border-radius: 5px;
+                    &:hover { background-color: var(--background);}
+                }
+            }
+        }
+    }
+
+    .chat-messages-bottom {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+
+        .cmb-container {
+            width: 100%;
+            display: flex;
+            gap: 10px;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+            &:hover {background-color: var(--sec-background);}
+
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+
+            .cmbt-left {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .cmbtl-top {
+                    display: flex;
+                    justify-content: space-between;
+
+                    h4 {color: var(--head-text);}
+                    span {
+                        color: var(--text);
+                        font-weight: 300;
+                    }
+                }
+
+                p {
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                    text-overflow: ellipsis;
+                    color: var(--text);
+                    font-size: 14px;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}

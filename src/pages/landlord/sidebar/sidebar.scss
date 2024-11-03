@@ -1,0 +1,135 @@
+@import "../../../responsive.scss";
+
+.sidebar-wrapper {
+    height: 100%;
+    width: max-content;
+    margin-right: 10px;
+
+    @include smartPhone {
+        display: none;
+    }
+
+    .sidebar-main {
+        z-index: 2;
+        position: fixed;
+        display: none;
+        width: 250px;
+        background-color: var(--sec-background);
+        height: 100%;
+        transition: display 0.3s left;
+        &.active {display: inline;}
+
+        .sidebar-main-container {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .close-bar {
+                position: absolute;
+                top: 20px;
+                right: -14px;
+
+                button {
+                    padding: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    border: none;
+                    background-color: var(--background);
+                    cursor: pointer;
+                    transition: all .3s ease;
+
+                    .close-bar-icon {
+                        font-size: 20px;
+                        color: var(--text);
+                        &:hover {transform: scale(1.1);}
+                    }
+                }
+            }
+
+            .line-devider {
+                width: 100%;
+                border: 2px solid var(--sec-line);
+            }
+
+            span {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: var(--text);
+                font-size: 18px;
+                width: max-content;
+                border-radius: 10px;
+                padding: 6px 10px;
+                cursor: pointer;
+                transition: background-color 0.3s ease-in-out;
+                &:hover {background-color: var(--background);};
+
+                .icon {&.active-icon{color: var(--btn);}}
+            }
+        }
+    }
+
+    .sidebar-icons {
+        position: fixed;
+        height: 100%;
+        background-color: var(--sec-background);
+        width: 90px;
+        z-index: 1;
+
+        .sidebar-icons-container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+            gap: 20px;
+            width: 80%;
+            position: relative;
+
+            .open-bar {
+                position: absolute;
+                top: 20px;
+                right: -32px;
+
+                button {
+                    border-radius: 50%;
+                    padding: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: var(--background);
+                    border: none;
+                    cursor: pointer;
+
+                    .open-bar-button {
+                        font-size: 22px;
+                        color: var(--text);
+                        &:hover {transform: scale(1.1);}
+                    }
+                }
+            }
+
+            button {
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+
+                .icon {
+                    font-size: 30px;
+                    color: var(--text);
+                    &.active-icon {color: var(--btn);}
+                    &:hover {transform: scale(1.1);}
+                }
+            }
+            .line-devider {
+                border: 2px solid var(--line);
+                width: 70%;
+            }
+        }
+    }
+}

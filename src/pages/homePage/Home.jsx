@@ -11,6 +11,10 @@ function Home() {
     return (
         <div className="home">
             <Landingpage />
+            <RecentlyAdded/>
+            <Promotion/>
+            <Reviews/>
+            <ProvinceFilter/>
         </div>
     );
 }

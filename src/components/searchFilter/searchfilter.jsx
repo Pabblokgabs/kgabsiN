@@ -1,7 +1,12 @@
+import { VarsityData } from "../../listdata/selectOptionData";
 import "./searchfilter.scss";
 import { FaSearch } from 'react-icons/fa';
 
 function SearchFilter() {
+    const combinedOptions = [
+        ...VarsityData[0].University.map((uni) => ({ name: uni})),
+        ...VarsityData[1].Colleges.map((college) => ({ name: college}))
+    ];
     return (
         <div className="searchfilter">
             <form>
@@ -9,17 +14,21 @@ function SearchFilter() {
                     <div className="select">
                         <label htmlFor="campus-select">Choose your campus:</label>
                         <select className="long" id="campus-select" name="campus" required>
-                            <option value="">Any</option>
-                            <option value="University Of Limpopo">University Of Limpopo</option>
+                            <option value="">Choose One:</option>
+                            {combinedOptions.map((option, index) => (
+                                <option key={index} value={option.name}>
+                                    {option.name}
+                                </option>
+                            ))}
                         </select>
                     </div>
                     <div className="select">
                         <label htmlFor="res-type">Res Type:</label>
                         <select id="res-type" name="res-type">
                             <option value="">All</option>
-                            <option value="Bachelor">Bachelor</option>
-                            <option value="Single">Single</option>
-                            <option value="Sharing">Sharing</option>
+                            <option value="bachelor">Bachelor</option>
+                            <option value="single">Single</option>
+                            <option value="sharing">Sharing</option>
                         </select>
                     </div>
                     <div className="price">

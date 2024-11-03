@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { FaSun, FaMoon } from 'react-icons/fa';
-import './mode.scss';
 
 function Mode() {
     const getInitialMode = () => {
@@ -29,10 +28,10 @@ function Mode() {
     };
 
     return (
-        <div className={`mode ${isDarkMode ? 'dark' : ''}`}>
-            <button onClick={toggleMode}>
-                {isDarkMode ? <FaSun /> : <FaMoon />} 
-                {isDarkMode ? 'Light' : 'Dark'} Mode
+        <div>
+            <button style={{border: "none", backgroundColor: "transparent", display: "flex", alignItems: 'center', gap: "10px", color: 'var(--prim)', cursor: "pointer"}} onClick={toggleMode}>
+                {isDarkMode ? <FaSun /> : <FaMoon />}
+                {isDarkMode ? "Light" : "Dark"}
             </button>
         </div>
     );

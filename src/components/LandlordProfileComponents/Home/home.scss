@@ -1,0 +1,32 @@
+@import '../../../responsive.scss';
+
+.landlord-home {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 20px 10px;
+
+    .landlord-home-top {
+        height: max-content;
+        display: flex;
+        width: 100%;
+        gap: 20px;
+
+        button {
+            font-size: 16px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            padding-bottom: 5px;
+            color: var(--sec-text);
+            &.active {
+                color: var(--head-text);
+                border-bottom: 2px solid var(--head-text);
+            }
+        }
+    }
+
+    .landlord-home-top {
+        flex: 1;
+    }
+}

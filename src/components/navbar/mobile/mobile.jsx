@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import { FaBars, FaUser, FaBell, FaCalendarCheck, FaHeart, FaArrowRight } from "react-icons/fa";
 import Mode from "../../darkMode/mode";
 
-function Mobile({ toggleLogin }) {
-    const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
+function Mobile({ handleLogin, isUserLoggedIn }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const menuRef = useRef(null);
 
@@ -60,7 +59,7 @@ function Mobile({ toggleLogin }) {
                         </>
                     ) : (
                         <>
-                            <Link className="m-link1" onClick={(e) => {e.preventDefault; toggleLogin() }}>Log in</Link>
+                            <Link className="m-link1" onClick={(e) => {e.preventDefault; handleLogin() }}>Log in</Link>
                             <Link className="m-link1" to="/signup">Sign up</Link>
                             <div className="line-breaker"></div>
                             <Link className="m-link2">List Your Property</Link>

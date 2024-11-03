@@ -1,0 +1,42 @@
+@import '../../../responsive.scss';
+
+.signout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px);
+    width: 100%;
+
+    .signout-container {
+        padding: 20px;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        width: max-content;
+
+        .top {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            h4 {
+                color: var(--head-text);
+                font-size: 18px;
+            }
+            button {
+                background-color: var(--btn);
+                color: var(--gray-50);
+                padding: 6px 10px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+
+                &:hover {background-color: var(--blue--950);}
+            }
+        }
+
+        span {
+            color: var(--text);
+        }
+    }
+}

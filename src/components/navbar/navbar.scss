@@ -9,6 +9,7 @@ nav {
     border-bottom: 3px solid var(--a-line);
     font-family: "Poppins", "Lato", sans-serif;
     position: relative;
+    width: 100%;
 
     @include laptop {
         padding: 0 50px;
@@ -108,6 +109,7 @@ nav {
 
             .lnl-hover {
                 position: relative;
+                transition: all 0.3s ease-in-out;
 
                 &::after {
                     content: ''; 
@@ -121,14 +123,8 @@ nav {
                     transform-origin: center; 
                     transition: transform 0.3s ease; 
                 }
-            
-                &:hover::after {
-                    transform: translateX(-50%) scaleX(1); 
-                }
-
-                &:hover {
-                    transform: scale(1.1);
-                }
+                &:hover::after {transform: translateX(-50%) scaleX(1);}
+                &:hover {transform: scale(1.1);}
             }
 
             @include laptop {
@@ -185,9 +181,13 @@ nav {
                 display: none;
             }
         }
-        
-        
 
+            span {
+                @include smartPhone {
+                    display: none;
+                }
+            }
+            
         .landlord-link2{
             display: none;
             font-size: 16px;
@@ -213,5 +213,16 @@ nav {
                 display: block;
             }
         }
+    }
+
+    .log-cont {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10000000000000000000;
+        display: none;
+
+        &.login-active{display: flex;}
     }
 }

@@ -5,6 +5,7 @@ import { ListData } from "../../listdata/dommyData";
 import { FaBookmark, FaHotel ,FaRegComment, FaMapMarkerAlt, FaRoad, FaBed, FaStar} from 'react-icons/fa';
 import Images from './imagesSlider/images';
 import Details from './details/details';
+import Map from '../../components/map/singlepagemap';
 
 const SinglePage = () => {
     const { id } = useParams();
@@ -62,6 +63,7 @@ const SinglePage = () => {
                              : null}
                         </div>
                     </div>
+                    <div className="map-div"><Map item={item}/></div>
                 </div>
             ) : (
                 <p>Loading...</p>

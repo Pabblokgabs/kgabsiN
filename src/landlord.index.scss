@@ -1,0 +1,50 @@
+:root {
+    --gray--50: #f9f9f9;
+    --gray--100: #ececec;
+    --gray--200: #e3e3e3;
+    --gray--300: #cdcdcd;
+    --gray--400: #b4b4b4;
+    --gray--500: #9b9b9b;
+    --gray--600: #676767;
+    --gray--700: #424242;
+    --gray--750: #2f2f2f;
+    --gray--800: #212121;
+    --gray--950: #0d0d0d;
+    --blue--400: #0056b3;
+    --blue--600: #0000ff;
+    --blue--950: #040420;
+    --red--700: #b91c1c;
+    --green--500: #00a67d;
+    --green--200: #00b59a;
+
+    /* light mode */
+    --background: var(--gray--50);
+    --sec-background: var(--gray--200);
+    --text: var(--gray--800);
+    --sec-text: var(--gray--700);
+    --head-text: var(--blue--950);
+    --active: var(--blue--950);
+    --shadow-color: var(--gray--400);
+    --fade: var(--gray--200);
+    --link: var(--blue--600);
+    --box: var(--blue--950);
+    --line: var(--gray--600);
+    --sec-line: var(--gray--300);
+    --input: var(--gray--100);
+}
+
+.dark--mode {
+    --background: var(--gray--700);
+    --sec-background: var(--gray--800);
+    --text: var(--gray--300);
+    --sec-text: var(--gray--400);
+    --head-text: var(--gray--50);
+    --active: var(--blue--600);
+    --shadow-color: var(--gray--600);
+    --fade: var(--gray--600);
+    --link: var(--blue--400);
+    --box: var(--gray--500);
+    --line: var(--gray--400);
+    --sec-line: var(--gray--600);
+    --input: var(--gray--750);
+}

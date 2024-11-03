@@ -1,0 +1,89 @@
+@import "../../../responsive.scss";
+
+.register {
+    height: calc(100vh - 100px);
+    padding: 50px 100px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+
+    @include laptop {
+        padding: 0 50px;
+    }
+
+    @include tablet {
+        padding: 0 20px;
+    }
+
+    @include smartPhone {
+        padding:50px 10px;
+        height: max-content;
+    }
+
+    .register-wrapper {
+        width: 100%;
+        box-shadow: 0px 0px 18px var(--shadow);
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        gap: 20px;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+
+        .register-wrapper-left {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            height: auto;
+
+            @include smartPhone {display: none;}
+
+            .logo {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                    margin-bottom: 7px;
+                    @include tablet {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+
+                p {
+                    font-size: 58px;
+                    font-weight: 900;
+                    color: var(--head-color);
+                    @include tablet {
+                        font-size: 30px;
+                    }
+
+                    span {color: var(--btn);}
+                }
+            }
+
+            h6 {
+                margin-top: -20px;
+            }
+            .login {
+                flex: 1;
+                display: flex;
+                gap: 5px;
+
+                .link {color: var(--btn);}
+            }
+        }
+
+        .register-wrapper-right {
+            flex: 3;
+            border-left: 3px solid var(--a-line);
+        }
+    }
+}

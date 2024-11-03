@@ -13,26 +13,23 @@
         align-items: center;
         cursor: pointer;
 
+        &.login-button {
+            background-color: var(--btn);
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: var(--gray-50);
+            transition: background-color .3s ease-in;
+            &:hover {background-color: var(--sec-btn);}
+        }
+
         img {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
         }
 
         &:hover {
             background-color: var(--sec-hover-color);
-        }
-
-        .fa-bars {
-            font-size: 16px;
-            color: var(--prim);
-        }
-
-        .fa-user {
-            font-size: 28px;
-            background-color: var(--a-line);
-            border-radius: 50%;
-            padding: 3px 5px;
         }
     }
 

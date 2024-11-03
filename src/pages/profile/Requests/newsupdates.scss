@@ -1,0 +1,31 @@
+@import "../../../responsive.scss";
+
+.newsupdates {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+    h1 {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--b-line);
+        margin-bottom: 20px;
+    }
+
+    .newsup-wrapper {
+        display: flex;
+        height: 100%;
+        width: 100%;
+
+        .newsup-container-left {
+            flex: 5;
+        }
+
+        .newsup-container-right {
+            flex: 2;
+            background-color: red;
+        }
+    }
+}

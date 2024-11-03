@@ -16,14 +16,14 @@ const Footer = () => {
                 <div className="container">
                     <h4 className="header">Support</h4>
                     <Link className="links">kgabs iN community</Link>
-                    <Link className="links">Contact Center</Link>
+                    <Link to="/contact-page" className="links">Contact Center</Link>
                     <Link className="links">Career</Link>
-                    <Link className="links">FAQ's</Link>
+                    <Link to="/faq-page" className="links">FAQ's</Link>
                 </div>
                 <div className="container">
                     <h4 className="header">Discover</h4>
                     <Link className="links">Events</Link>
-                    <Link className="links">Transport Help</Link>
+                    <Link to="/transport-help" className="links">Transport Help</Link>
                     <Link className="links">Trending News</Link>
                 </div>
                 <div className="container">

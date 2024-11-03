@@ -35,6 +35,7 @@ h1,h2,h3,h4{
     --red-700: #b91c1c;
     --blue-400: #0056b3;
     --blue-600: #0000ff;
+    --blue-950: #040420;
     --green-500: #00a67d;
     --green-200: #00b59a;
     --muted-yl: #FFD700;
@@ -52,7 +53,7 @@ h1,h2,h3,h4{
     --thrd-btn-hover: var(--gray-300);
     --prim: var(--gray-800);
     --sec: var(--gray-700);
-    --head-color: var(--gray-950);
+    --head-color: var(--blue-950);
     --shadow: var(--gray-300);
     --sec-shadow: var(--gray-500);
     --a-line: var(--gray-200);
@@ -79,5 +80,6 @@ h1,h2,h3,h4{
     --sec-hover-color: var(--gray-800);
     --thrd-btn: var(--gray-600);
     --thrd-btn-hover: var(--gray-500);
+    ----bold: var(--blue-600);
 }
 

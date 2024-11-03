@@ -2,7 +2,7 @@ import Bookings from "../pages/profile/Bookings/bookings";
 import Chats from "../pages/profile/chats/chat";
 import Notifications from "../pages/profile/Notifications/notification";
 import ProfileView from "../pages/profile/profileView/profileView";
-import Requests from "../pages/profile/Requests/request";
+import NewsUpdates from "../pages/profile/Requests/newsupdates";
 import SavedList from "../pages/profile/savedList/savedlist";
 
 export const renderActiveComponent = (activeComponent) => {
@@ -13,8 +13,8 @@ export const renderActiveComponent = (activeComponent) => {
             return <Notifications />
         case 'bookings':
             return <Bookings />
-        case 'requests':
-            return <Requests />
+        case 'news':
+            return <NewsUpdates />
         case 'savedList':
             return <SavedList />
         case 'chats':

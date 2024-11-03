@@ -1,0 +1,11 @@
+@import '../../../responsive.scss';
+
+.information {
+    flex: 1;
+    height: 100%;
+    margin-left: 95px;
+    transition: margin-left .3s ease-in;
+    &.istoggle{margin-left: 255px;}
+
+    @include smartPhone {display: none;}
+}

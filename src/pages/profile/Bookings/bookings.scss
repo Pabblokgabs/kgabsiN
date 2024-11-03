@@ -1,0 +1,76 @@
+@import "../../../responsive.scss";
+
+.bookings {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    h1 {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--b-line);
+        margin-bottom: 20px;
+    }
+
+    .booking-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .booking-container {
+        border: 2px solid var(--b-line);
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+
+        img {
+            height: 200px;
+            border-radius: 5px;
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-left: 10px;
+            width: 100%;
+
+            h2 {
+                font-size: 18px;
+            }
+
+            .buttons {
+                display: flex;
+                width: 100%;
+                align-items: center;
+                justify-content: space-between;
+
+                p {
+                    font-weight: 300;
+                    font-weight: 12px;
+
+                    span {
+                        font-weight: 600;
+                        font-size: 16px;
+                        background-color: var(--shadow);
+                        padding: 2px;
+                        border-radius: 5px;
+                    }
+                }
+
+                button {
+                    padding: 10px 20px;
+                    background-color: var(--btn);
+                    border-radius: 5px;
+                    border: none;
+                    color: var(--gray-50);
+                    cursor: pointer;
+                    transition: all .3s ease-in-out;
+                    &:hover {background-color: var(--sec-btn);}
+                }
+            }
+        }
+    }
+}

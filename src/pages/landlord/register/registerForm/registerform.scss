@@ -1,0 +1,74 @@
+@import '../../../../responsive.scss';
+
+.register-form {
+    margin: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        margin-bottom: 20px;
+        border-bottom: 2px solid var(--b-line);
+        width: 100%;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .register-form-top {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width: 100%;
+
+        @include smartPhone {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            .error {color: red; font-size: 12px;}
+
+            label {
+                font-weight: 300;
+            }
+
+            input {
+                padding: 8px;
+                outline: none;
+                border-radius: 10px;
+                border: 2px solid var(--a-line);
+            }
+        }
+    }
+
+    .register-form-bottom {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 30px;
+
+        .terms{
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            font-size: 14px;
+
+            .link {
+                color: var(--btn);
+            }
+        }
+
+        button {
+            padding: 8px 20px;
+            border: none;
+            background-color: var(--btn);
+            color: var(--gray-50);
+            cursor: pointer;
+            &:hover {background-color: var(--sec-btn);}
+            &:disabled {opacity: .4; cursor: not-allowed;}
+        }
+    }
+}

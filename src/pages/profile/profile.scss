@@ -40,11 +40,9 @@
                     display: flex;
                     gap: 20px;
                     font-size: 20px;
+                    transition: background-color .3s ease-in-out;
                     span {color: var(--head-color);}
-
-                    &:hover {
-                        background-color: var(--sec-bg);
-                    }
+                    &:hover {background-color: var(--sec-bg);}
                     &.active{color: var(--btn); border: 2px solid var(--b-line);}
                 }
 
@@ -60,12 +58,6 @@
             flex: 1;
             height: 100%;
             border-right: 3px solid var(--b-line);
-            padding: 10px 20px;
-        }
-
-        .conta-right {
-            flex: 1;
-            height: 100%;
             padding: 10px 20px;
         }
     }

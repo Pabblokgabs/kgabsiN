@@ -6,7 +6,7 @@ import OptionalData from "./optionalData/OptionalData";
 function SignUpForm() {
     const [isCheckedShow, setIsCheckedShow] = useState(false);
     const [isChecked, setIsChecked] = useState(false);
-    const [formValues, setFormValues] = useState({ fullname: "", lastname: "", email: "", number: "", password: "", confirmPassword: "", });
+    const [formValues, setFormValues] = useState({ fullname: "", lastname: "", email: "", number: "", password: "", confirmPassword: "", role: "user" });
     const [optionalData, setOptionalData] = useState({ varsity: "", course: "", courseLevel: "", });
     const [errors, setErrors] = useState({});
 
