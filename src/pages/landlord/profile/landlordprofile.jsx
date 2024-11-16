@@ -1,5 +1,4 @@
 import "./landlordprofile.scss";
-import "../../../landlord.index.scss";
 import { IoInformationCircleOutline, IoNotificationsOutline } from 'react-icons/io5';
 import Mode from "../modechange/mode";
 import Sidebar from "../sidebar/sidebar";

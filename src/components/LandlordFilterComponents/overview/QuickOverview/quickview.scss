@@ -45,36 +45,54 @@
         color: var(--head-text);
     }
 
-    .dec-inc {
+    form {
         display: flex;
+        flex-direction: column;
         gap: 10px;
-        align-items: center;
-        justify-content: space-between;
+        padding: 0 10px;
 
-        .dec-inc-left {
+        .dec-inc {
             display: flex;
-            align-items: center;
             gap: 10px;
-
-            span {
-                font-size: 18px;
-            }
-        }
-
-        .dec-inc-right {
-            display: flex;
-            gap: 5px;
-
-            button {
+            align-items: center;
+            justify-content: space-between;
+    
+            .dec-inc-left {
                 display: flex;
                 align-items: center;
-                gap: 5px;
-                cursor: pointer;
-                padding: 5px 10px;
-                border-radius: 5px;
-                border: none;
+                gap: 10px;
+    
+                span {
+                    font-size: 18px;
+                }
+    
+                .dil-buttons {
+                    display: flex;
+                    gap: 5px;
+    
+                    button {
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: var(--text);
+                        background-color: transparent;
+                        outline: none;
+                        border: 2px solid var(--sec-line);
+                        font-size: 16px;
+                        cursor: pointer;
+                    }
+                }
+            }
+            #update {
+                padding: 5px 20px;
                 color: var(--gray--50);
-                background-color: var(--blue-600);
+                background-color: var(--btn);
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all .3s ease-in-out;
+                &:hover {background-color: var(--blue-950);}
             }
         }
     }

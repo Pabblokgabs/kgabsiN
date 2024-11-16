@@ -4,14 +4,12 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    background-color: var(--background);
 
     .landlord-overview-left {
         flex: 10 1 500px;
         display: flex;
         flex-direction: column;
         gap: 20px;
-        height: auto;
 
         .landlord-overview-left-1 {
             display: flex;
@@ -259,7 +257,7 @@
 
     .landlord-overview-right {
         flex: 1 1 300px;
-        height: 70vh;
+        height: max-content;
         border: 3px solid var(--sec-line);
         padding: 10px;
         border-radius: 10px;

@@ -84,6 +84,7 @@
         .register-wrapper-right {
             flex: 3;
             border-left: 3px solid var(--a-line);
+            height: max-content;
         }
     }
 }

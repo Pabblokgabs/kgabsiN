@@ -39,6 +39,16 @@
         .link {
             color: var(--head-color);
             height: max-content;
+
+            h1 {
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                line-height: 1.5;
+                max-height: 3em; 
+                text-overflow: ellipsis;
+            }
         }
 
         .wrapper {

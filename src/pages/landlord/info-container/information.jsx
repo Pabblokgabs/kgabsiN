@@ -3,7 +3,7 @@ import './information.scss';
 
 function Information({ toggle, activeComponent }) {
     return (
-        <div className={!toggle ? 'information' : 'information istoggle'}>
+        <div className='information' >
             {renderActiveComponent(activeComponent)}
         </div>
     );

@@ -7,6 +7,18 @@
     flex-direction: column;
     font-family: "Roboto", sans-serif;
 
+    @include laptop {
+        padding: 20px 50px;
+    }
+
+    @include tablet {
+        padding: 20px 50px;
+    }
+
+    @include smartPhone {
+        padding: 10px 20px;
+    }
+
     .singlePage-container {
         display: flex;
         flex-direction: column;
@@ -20,6 +32,10 @@
             h1 {
                 color: var(--head-color);
                 font-size: 30px;
+
+                @include smartPhone {
+                    font-size: 18px;
+                }
             }
             button {
                 display: flex;
@@ -31,6 +47,10 @@
                 padding: 2px 3px;
                 background-color: transparent;
                 color: var(--prim);
+
+                @include smartPhone {
+                    display: none;
+                }
 
                 &:hover {background-color: var(--a-line);}
                 &:hover .fabookmark {color: aqua;}

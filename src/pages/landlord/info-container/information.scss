@@ -2,7 +2,7 @@
 
 .information {
     flex: 1;
-    height: 100%;
+    height: max-content;
     margin-left: 95px;
     transition: margin-left .3s ease-in;
     &.istoggle{margin-left: 255px;}

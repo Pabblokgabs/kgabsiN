@@ -3,15 +3,15 @@ import { filterActiveComponent } from '../../../libraries/LandlordProfileRender'
 import "./home.scss";
 
 function Terms() {
-    const buttons = ['Overview', 'Ratings', 'Stats', 'Feedback'];
+    const buttons = ['Overview'];
     const [currentSate, setCurrentState] = useState("Overview");
     const handleCurrentButton= (label) => {setCurrentState(label)};
     
     return (
         <div className="landlord-home">
-            <div className="landlord-home-top">
+            <div style={{display: 'none'}} className="landlord-home-top">
                 {buttons.map(item => (
-                    <button className={item === currentSate ? "active" : ''} name={item} onClick={(e) => handleCurrentButton(e.currentTarget.name)}>{item}</button>
+                    <button style={{display: 'none'}} className={item === currentSate ? "active" : ''} name={item} onClick={(e) => handleCurrentButton(e.currentTarget.name)}>{item}</button>
                 ))}
             </div>
             <div className="landlord-home-container">

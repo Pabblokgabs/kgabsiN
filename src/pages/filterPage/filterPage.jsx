@@ -42,7 +42,7 @@ const Data = ListData;
                     )}
                 </div>
             </div>
-            <div className="map-container"><Map items={Data}/></div>
+            <div style={{position: 'sticky', top: '50px'}} className="map-container"><Map items={Data}/></div>
         </section>
     );
 }

@@ -11,6 +11,7 @@ import Contact from "./pages/contact/contact";
 import LandlordProfile from "./pages/landlord/profile/landlordprofile";
 import Transport from "./pages/TransportPage/transport";
 import UserFaq from "./pages/faqPage/userfaq";
+import ProfileSec from "./pages/landlord/profile/profile";
 
 function App() {
   const router = createBrowserRouter([
@@ -63,6 +64,10 @@ function App() {
     {
       path: "/profile-landlord",
       element: <LandlordProfile />
+    },
+    {
+      path: "/profileyalandllord",
+      element: <ProfileSec />
     },
   ]);
 

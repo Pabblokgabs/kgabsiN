@@ -24,6 +24,10 @@ function Transport() {
     const handleClick = (id) => {setSelectedId(id);};
     const selectedItem = Data.find(item => item.id === selectedId);
 
+    /* to handle view more for mobile */
+    const [isMobile, setIsMobile] = useState(true);
+    const handleIsMobile = () => {setIsMobile(!isMobile)};
+
     /* for images slide */
     const [currentIndex, setCurrentIndex] = useState(0);
     const handlePrev = () => {setCurrentIndex((prevIndex) =>  prevIndex === 0 ? selectedItem.images.length - 1 : prevIndex - 1 );};
@@ -99,21 +103,23 @@ function Transport() {
                     <h1>Looking for transport?</h1>
                     <input type="text" placeholder='Search name' value={searchTerm} onChange={handleSearchChange} />
                     <h4>Filter by:</h4>
-                    <select name="varsity" id="varsity">
-                        <option value="">Varsity</option>
-                        <option value="">All</option>
-                        {combinedOptions.map((option, index) => (
-                            <option key={index} value={option.name}>
-                                {option.name}
-                            </option>
-                        ))}
-                    </select>
-                    <select name="transport" id="transport" >
-                        <option value="">Type</option>
-                        <option value="">Any</option>
-                        <option value="Long distance">Long Distance</option>
-                        <option value="short distance">Short Distance</option>
-                    </select>
+                    <div className="select_input">
+                        <select name="varsity" id="varsity">
+                            <option value="">Varsity</option>
+                            <option value="">All</option>
+                            {combinedOptions.map((option, index) => (
+                                <option key={index} value={option.name}>
+                                    {option.name}
+                                </option>
+                            ))}
+                        </select>
+                        <select name="transport" id="transport" >
+                            <option value="">Type</option>
+                            <option value="">Any</option>
+                            <option value="Long distance">Long Distance</option>
+                            <option value="short distance">Short Distance</option>
+                        </select>
+                    </div>
                 </form>
                 <p className='transport-left-bottom'>
                     <b>Important Notice:</b> If you notice any suspicious activity or encounter a potential scam, please report it to us immediately. Your safety is our priority, and prompt reporting helps us protect our community.
@@ -134,7 +140,6 @@ function Transport() {
                             </div>
                         </div>
                     )}
-
 
                 <div className={trigger ? "transport-register-container trigger" : "transport-register-container"}>
                     <div className="trc-top">
@@ -221,8 +226,8 @@ function Transport() {
 
 
                 <div className="transport-right-all">
-                    {filteredData.map(item => (
-                        <div className="transport-right-all-container" key={item.id}>
+                    {isMobile && (
+                        filteredData.map(item => (<div className="transport-right-all-container" key={item.id}>
                             <div className="img-images">
                                 <img src={item.images[0]} alt="Transport photo" />
                             </div>
@@ -231,12 +236,34 @@ function Transport() {
                                 <p><strong>Driver:</strong> {item.driver}</p>
                                 <p><strong>Province:</strong> {item.province}</p>
                                 <p style={{ flex: "1" }}><strong>Type:</strong> {item.type}</p>
-                                <div className="more-button" onClick={() => handleClick(item.id)}>
-                                    <button>View Details</button>
+                                <div className="more-button">
+                                    <button className='big' onClick={() => handleClick(item.id)}>View Details</button>
+                                    <button className='small' onClick={() => {handleIsMobile(); handleClick(item.id);}}>View Details</button>
                                 </div>
                             </div>
                         </div>
-                    ))}
+                    ))
+                    )}
+
+                    <div className="smartPhoneView">
+                        {selectedItem && (
+                            <>
+                                <div className='top_top'><h1>{selectedItem.name}</h1> <button onClick={handleIsMobile}>X</button></div>
+                                <div className="img-wrapper">
+                                    <button className='less' onClick={handlePrev}><FaLessThan /></button>
+                                    <img src={selectedItem.images[currentIndex]} alt={`transport photo ${currentIndex}`} className="slide-image"/>
+                                    <button className='greater' onClick={handleNext}><FaGreaterThan /></button>
+                                </div>
+                                <div className="p-for-information">
+                                    <p><strong>Driver:</strong> {selectedItem.driver}</p>
+                                    <p><strong>Province:</strong> {selectedItem.province}</p>
+                                    <p><strong>Type:</strong> {selectedItem.type}</p>
+                                    <p><strong>Contacts:</strong> {selectedItem.call}</p>
+                                    <p><strong>WhatsApp:</strong> {selectedItem.whatsapp}</p>
+                                </div>
+                            </>
+                        )}
+                    </div>
                 </div>
                 <div className="transport-right-view">
                     {selectedItem ? (

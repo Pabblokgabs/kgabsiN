@@ -1,28 +1,28 @@
 const LandlordDommy = {
     id: 1,
     name: "Mantshancha Residence Residence Residence",
-hosts: {
-    landlord: {
-        name: "Mr Pabblo",
-        role: "LandLord",
-        img: "/testimonial/1.png",
-        languages: ["Sepedi", "English",]
+    hosts: {
+        landlord: {
+            name: "Mr Pabblo",
+            role: "LandLord",
+            img: "/testimonial/1.png",
+            languages: ["Sepedi", "English",]
+        },
+        caretaker: [
+            {
+                name: "Mrs Kgabs",
+                role: "CareTaker",
+                img: "/pagePhotos/key3.jpg",
+                languages: ["Sepedi", "English"],
+            },
+            {
+                name: "Mrs Kgabs",
+                role: "CareTaker",
+                img: "/testimonial/2.png",
+                languages: ["Sepedi", "English"],
+            },
+        ],
     },
-    caretaker: [
-        {
-            name: "Mrs Kgabs",
-            role: "CareTaker",
-            img: "/pagePhotos/key3.jpg",
-            languages: ["Sepedi", "English"],
-        },
-        {
-            name: "Mrs Kgabs",
-            role: "CareTaker",
-            img: "/testimonial/2.png",
-            languages: ["Sepedi", "English"],
-        },
-    ],
-},
     image: [
         "/singlepage/apart1.jpg",
         "/singlepage/apart2.jpg",

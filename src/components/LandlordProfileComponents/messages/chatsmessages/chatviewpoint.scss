@@ -41,7 +41,7 @@
     }
     .chat-messages-viewpoint-bottom {
         flex: 1;
-        background-color: var(--sec-background);
+        background-color: var(--background);
         border-radius: 10px;
         display: flex;
         flex-direction: column;
@@ -53,7 +53,7 @@
         .cmvb-type {
             display: flex;
             align-items: center;
-            border: 2px solid var(--sec-background);
+            border: 2px solid var(--background);
             overflow: hidden;
             height: max-content;
             border-bottom-left-radius: 10px;
@@ -64,7 +64,7 @@
                 border: none;
                 outline: none;
                 color: var(--text);
-                background-color: var(--background);
+                background-color: var(--sec-background);
                 padding: 5px 20px;
                 font-size: 16px;
             }
